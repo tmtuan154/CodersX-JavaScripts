@@ -1,0 +1,19 @@
+Các hàm khi sử dụng mảng
+
+map() ánh xạ giá trị từ mảng ban đầu thành mảng với giá trị khác. Giá trị trả về là mảng
+
+filter() lọc những giá trị thỏa điều kiện. kết quả là mảng. Giá trị lọc là true/flase
+
+find() tìm giá trị trong mảng thỏa điều kiện. trả về 1 giá trị, sau khi tìm được điều kiện true
+
+reduce() (total, item) 
+(item1, item2) hàm tính giá trị xong gộp lại vào item1 kết quả chỉ là 2 số
+
+Array.isArray(item) kiểm tra item có phải là array không
+
+cú pháp if ba ngôi condition ? true : false
+
+
+Math Object
+Math.celi() làm tròn lên
+Math.floor() làm tròn xuống
