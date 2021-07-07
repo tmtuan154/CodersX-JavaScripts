@@ -1,2 +1,2 @@
 # codersX
-# Tổng hợp bài tập Javácripts
+### Tổng hợp bài tập JavaScripts
