@@ -75,12 +75,11 @@ var students = [
   { name: 'E', score: 75 }
 ];
 
-function getTopStudents(students) {
+function getTopStudents2(students) {
   return  students.sort(function (s1, s2) 
   {
       return s2.score - s1.score;
   }).reduce((arr, student) => arr.concat(student.name), []).slice(0,3);
-  return rs;
 }
 
 console.log(getTopStudents(students))
