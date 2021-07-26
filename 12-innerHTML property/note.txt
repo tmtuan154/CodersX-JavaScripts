@@ -1,0 +1,1 @@
+Khi sửa nội dung của element nhưng có chứa thêm element khác, thì sử dụng textContent không hiểu quả. DO đó chúng ta sử dụng innerHTML

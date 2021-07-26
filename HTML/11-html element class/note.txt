@@ -1,3 +1,5 @@
 Khi chọn vào thuộc tính phía bên trang thì $0 chính là element đang được chọn
 Truy xuất để xem các child element thì dùng $0.children
 Truy xuất lấy nội dung thì dùng $0.textContain
+Thêm mới một children document.appendChildren
+remove() children
