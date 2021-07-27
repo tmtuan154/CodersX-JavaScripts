@@ -4,7 +4,6 @@ function render(){
 }
 
 function addNewItem(){
-    console.log('Minh Tuan');
     var item = document.getElementById('todo');
     console.log(item);
     var text = item.value;

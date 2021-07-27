@@ -14,7 +14,7 @@
         <div>
             <label for="todo">Them cong viec</label>
             <input type="text" name="todo" id="todo">
-            <input type="button" value="Save" onclick="addNewItem()">
+            <input id="addTodo" type="button" value="Save"">
         </div>
         
         <ul id="todoList">
@@ -23,6 +23,13 @@
             <li>Rua chen</li>
         </ul>
     </div>
-    
+    <script>
+        var addTodoBtn = document.getElementById('addTodo');
+        addTodoBtn.addEventListener('click', ()=>{
+            console.log('btn press');
+        })
+        addTodoBtn.addEventListener('click', addNewItem);
+        
+    </script>
 </body>
 </html>

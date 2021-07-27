@@ -1,5 +1,7 @@
 Khi chọn vào thuộc tính phía bên trang thì $0 chính là element đang được chọn
 Truy xuất để xem các child element thì dùng $0.children
-Truy xuất lấy nội dung thì dùng $0.textContain
+Truy xuất lấy nội dung thì dùng $0.textContain dùng để lấy nội dung đối với thẻ <> <>
 Thêm mới một children document.appendChildren
 remove() children
+
+Trường hợp form thì cần sử dụng .value
