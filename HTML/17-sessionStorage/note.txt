@@ -1,0 +1,2 @@
+Khi nhập text vào input nhưng khi reload trang sẽ bị mất
+Do đó chúng ta lưu vào sessionStorage, hiệu lực khi chúng ta vẫn còn ở trang web. Khi đóng trang web session sẽ bị mất

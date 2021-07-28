@@ -1,0 +1,7 @@
+{
+  "todos": [
+    { "id": 1, "content": "Giat do" },
+    { "id": 2, "content": "Rua chen" },
+    { "id": 3, "content": "Nau com" }
+  ]
+}

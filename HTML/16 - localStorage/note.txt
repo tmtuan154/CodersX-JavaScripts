@@ -1,0 +1,2 @@
+1. localStorage không được chia sẽ giữa các máy tính viớ nhau
+2. localStorage có giới hạn

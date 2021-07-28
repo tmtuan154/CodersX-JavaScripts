@@ -1,0 +1,3 @@
+Học sự kiến onclick cho btn onclick='ten ham()'
+Bài tập ví dụ:
+Tạo danh sách cv cần làm, add công việc
