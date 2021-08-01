@@ -1,2 +1,9 @@
 XSS khi những trang web bảo mật kém
 Nếu không kiểm tra các dữ liệu người dùng đưa vào có thể bị tấn công
+
+Tại thẻ todo có thể chèn một script vào
+    1. Ví dụ thẻ span attribute onmouseover thì khi đưa chuột vào đó sẽ xử lý
+    2. Do ở đây xử dụng innerHTML nên code script không chạy, nếu dùng jQeury thì code đó sẽ tự chạy
+    3. Lợi dụng này để đọc localStorage lấy cắp token
+    4. Dùng thư viện keyword tìm kiếm: XSS js hoặc xss fillter, thường lib dùng ở server side chứ không dùng ở client side
+    5. Dùng ở clinet bảo vệ client, dùng ở server bảo vệ db

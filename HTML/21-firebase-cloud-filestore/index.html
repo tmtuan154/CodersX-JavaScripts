@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài 21 - Firebase FileStorage</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
+
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <h1>Bài 21 - Firebase FileStorage</h1>
+    <div>
+      <h2>Danh sach viec can lam</h2>
+      <div>
+        <label for="todo">Them cong viec</label>
+        <input type="text" name="todo" id="txtTodo" />
+        <input id="addTodo" type="button" value="Save" />
+      </div>
+
+      <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var db = firebase.firestore();
+        db.collection('todos')
+          .get()
+          .then(function (snap) {
+            console.log(snap);
+          });
+      });
+    </script>
+  </body>
+</html>

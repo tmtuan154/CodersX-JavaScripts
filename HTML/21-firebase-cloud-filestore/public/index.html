@@ -45,21 +45,42 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var db = firebase.firestore();
+        var addTodoBtn = document.getElementById("addTodo");
+        var todoListTag = document.getElementById("todo-list");
+
+        todoInputTag.value = "";
+
+        addTodoBtn.addEventListener("click", addNewTodo1);
+        
         db.collection("todos")
           .get()
           .then(function (snap) {
             render(snap.docs);
           });
-        var addTodoBtn = document.getElementById("addTodo");
 
-        addTodoBtn.addEventListener("click", addNewTodo1);
+        db.collection("todos")
+          .add({
+            content: value,
+          })
+          .then(function (docRef) {
+            alert("Them thanh cong với id: ", docRef.id);
+          })
+          .catch((error) => {
+            console.error("Error adding document: ", error);
+          });
 
         function render(todoList) {
           const content = todoList.map(function (todo) {
             var data = todo.data();
-            return "<li>" + todo.data().content + "</li>";
+            return (
+              "<li>" +
+              todo.data().content +
+              "</li>" +
+              "<button data-id= " +
+              todo.id +
+              " >Delete</button>"
+            );
           });
-          var todoListTag = document.getElementById("todo-list");
           todoListTag.innerHTML = content.join("");
         }
 
@@ -69,20 +90,7 @@
           var liTag = document.createElement("li");
           var liTextContent = document.createTextNode(value);
           liTag.appendChild(liTextContent);
-          var todoListTag = document.getElementById("todo-list");
           todoListTag.appendChild(liTag);
-
-          db.collection("todos")
-            .add({
-              content: value,
-            })
-            .then(function (docRef) {
-              alert("Them thanh cong với id: ", docRef.id);
-            })
-            .catch((error) => {
-              console.error("Error adding document: ", error);
-            });
-          todoInputTag.value= '';
         }
       });
     </script>

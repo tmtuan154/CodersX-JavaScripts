@@ -1,0 +1,2 @@
+Chuyển trang dùng window.location.href = Đặt địa chỉ trang web về
+Nếu trang web có id thì dùng location.hash xong xử lý

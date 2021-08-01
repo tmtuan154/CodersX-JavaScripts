@@ -1,0 +1,4 @@
+data-attribute
+Nếu muốn dùng atribute nào thì dùng sau dâu - của data
+Ví dụ dùng id: data-id
+Khi dùng như vậy sẽ thêm vào dataset // thuộc tính luôn là một string

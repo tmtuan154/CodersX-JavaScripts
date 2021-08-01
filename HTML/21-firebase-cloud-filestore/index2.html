@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" type="text/javascript"></script>
+    <title>Bai 20</title>
+  </head>
+  <body>
+    <h1>Bài 20 - Firebase Hosting</h1>
+    <div>
+      <h2>Danh sach viec can lam</h2>
+      <div>
+        <label for="todo">Them cong viec</label>
+        <input type="text" name="todo" id="txtTodo" />
+        <input id="addTodo" type="button" value="Save" />
+      </div>
+
+      <ul id="todo-list"></ul>
+    </div>
+    <script>
+      var addTodoBtn = document.getElementById("addTodo");
+
+      addTodoBtn.addEventListener("click", addNewTodo1);
+      var todoList = ["Giat do", "nau com", "Rua chen"];
+
+      const storageKey = "todo-list";
+
+      function render(todoList) {
+        const content = todoList.map(function (todo) {
+          return "<li>" + todo + "</li>";
+        });
+        var todoListTag = document.getElementById("todo-list");
+        todoListTag.innerHTML = content.join("");
+      }
+
+      function loadData1() {
+        var todoListStorage = JSON.parse(localStorage.getItem(storageKey));
+        var todoRender = [];
+        if (todoListStorage !== null) {
+          todoRender = todoListStorage;
+        } else {
+          todoRender = todoList;
+        }
+        render(todoRender);
+      }
+
+      function addNewTodo1() {
+        const todoInputTag = document.getElementById("txtTodo");
+        const value = todoInputTag.value;
+        var liTag = document.createElement("li");
+        var liTextContent = document.createTextNode(value);
+        liTag.appendChild(liTextContent);
+        todoList.push(value);
+        var todoListTag = document.getElementById("todo-list");
+        todoListTag.appendChild(liTag);
+        localStorage.setItem(storageKey, JSON.stringify(todoList));
+        todoList1 = JSON.parse(localStorage.getItem(storageKey));
+      }
+
+      loadData1();
+    </script>
+  </body>
+</html>
