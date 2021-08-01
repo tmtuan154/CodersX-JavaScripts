@@ -1,0 +1,5 @@
+Hosting là đưa trang web mình lên server, (thay vì phải chạy máy local luôn online)
+
+Không cần code Backed, vẫn có CSDL chạy đàng hoàng. Chỉ dùng để host trang web
+
+1. npm install -g firebase-tools

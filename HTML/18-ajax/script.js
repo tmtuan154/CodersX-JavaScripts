@@ -1,6 +1,4 @@
-var axios = require('axios');
-
-const url = 'http://localhost:3000/todos';
+//var axios = require('axios');
 
 function loadData(){
     axios.get(url).then(function(res){
@@ -17,6 +15,6 @@ function render(data){
     todoListTag.innerHTML = content.join('');
 }
 
-console.log(axios.get(url).then(function(respone){
-    console.log(respone.data);
-}));
+// console.log(axios.get(url).then(function(respone){
+//     console.log(respone.data);
+// }));

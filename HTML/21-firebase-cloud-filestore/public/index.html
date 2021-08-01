@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài 21 - Firebase FileStorage</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.8.1/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+    <h1>Bài 21 - Firebase FileStorage</h1>
+    <div>
+      <h2>Danh sach viec can lam</h2>
+      <div>
+        <label for="todo">Them cong viec</label>
+        <input
+          type="text"
+          name="todo"
+          id="txtTodo"
+          placeholder="Công việc cần làm"
+          autofocus
+        />
+        <input id="addTodo" type="button" value="Save" />
+      </div>
+
+      <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var db = firebase.firestore();
+        db.collection("todos")
+          .get()
+          .then(function (snap) {
+            render(snap.docs);
+          });
+        var addTodoBtn = document.getElementById("addTodo");
+
+        addTodoBtn.addEventListener("click", addNewTodo1);
+
+        function render(todoList) {
+          const content = todoList.map(function (todo) {
+            var data = todo.data();
+            return "<li>" + todo.data().content + "</li>";
+          });
+          var todoListTag = document.getElementById("todo-list");
+          todoListTag.innerHTML = content.join("");
+        }
+
+        function addNewTodo1() {
+          const todoInputTag = document.getElementById("txtTodo");
+          const value = todoInputTag.value;
+          var liTag = document.createElement("li");
+          var liTextContent = document.createTextNode(value);
+          liTag.appendChild(liTextContent);
+          var todoListTag = document.getElementById("todo-list");
+          todoListTag.appendChild(liTag);
+
+          db.collection("todos")
+            .add({
+              content: value,
+            })
+            .then(function (docRef) {
+              alert("Them thanh cong với id: ", docRef.id);
+            })
+            .catch((error) => {
+              console.error("Error adding document: ", error);
+            });
+          todoInputTag.value= '';
+        }
+      });
+    </script>
+  </body>
+</html>

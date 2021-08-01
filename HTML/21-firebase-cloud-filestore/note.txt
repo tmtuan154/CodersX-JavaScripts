@@ -1,0 +1,2 @@
+Get and update thành công
+Nếu có lỗi là do cấu hình allow read and write

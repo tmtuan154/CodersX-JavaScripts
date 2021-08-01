@@ -1,0 +1,2 @@
+XSS khi những trang web bảo mật kém
+Nếu không kiểm tra các dữ liệu người dùng đưa vào có thể bị tấn công

@@ -1,6 +1,8 @@
 1. localStorage không được chia sẽ giữa các máy tính viớ nhau
 2. localStorage có giới hạn (max=10)
 
-chạy lệnh: json-server --watch db.json
+chạy lệnh: json-server --watch db.json. Nếu chưa có file db sẽ tự tạo
+
+Sau khi gọi axios sẽ trả về một Promise, nên dùng .then()
 
 Bài này không chạy được, do không thể require ở phía client (phía client không có node js)
