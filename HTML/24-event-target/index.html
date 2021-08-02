@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 24 - Event target</title>
+  </head>
+  <body>
+    <h1>Bài 24 - Event target</h1>
+    <div>
+      <h2>Danh sach viec can lam</h2>
+      <div>
+        <label for="todo">Them cong viec</label>
+        <input type="text" name="todo" id="txtTodo" />
+        <input id="addTodo" type="button" value="Save" />
+      </div>
+
+      <ul id="todo-list"></ul>
+    </div>
+    <script>
+      /* Declare */
+      var addTodoBtn = document.getElementById("addTodo");
+      const storageKey = "todo-list";
+      var todoList = [];
+      var todoListInit = ["Giat do", "nau com", "Rua chen"];
+      var todoListTag = document.getElementById("todo-list");
+
+      /* Add event listener */
+      addTodoBtn.addEventListener("click", addNewTodo1);
+      todoListTag.addEventListener("click", onListClicked);
+
+      /* Function definitiom */
+      function onListClicked(event) {
+        var button = event.target;
+        var id = button.dataset.id;
+        todoList.splice(id, 1);
+        localStorage.setItem(storageKey, JSON.stringify(todoList));
+        render(todoList);
+
+      }
+
+      function render(todoList) {
+        const content = todoList.map(function (todo, index) {
+          return (
+            "<li>" +
+            todo +
+            "</li>" +
+            "<button data-id =" +
+            index +
+            ">Delete</button>"
+          );
+        });
+
+        todoListTag.innerHTML = content.join("");
+      }
+
+      function loadData1() {
+        var todoListStorage = JSON.parse(localStorage.getItem(storageKey));
+        var todoRender = [];
+        // if (todoListStorage !== null) {
+        //   todoRender = todoListStorage;
+        // }
+        // else{
+        //     todoRender = todoListInit;
+        // }
+        todoRender = todoListStorage.length !== 0 ? todoListStorage : todoListInit;
+        todoList = todoRender;
+        render(todoRender);
+      }
+
+      function addNewTodo1() {
+        const todoInputTag = document.getElementById("txtTodo");
+        const value = todoInputTag.value;
+
+        // var liTag = document.createElement("li");
+        // var liTextContent = document.createTextNode(value);
+        // liTag.appendChild(liTextContent);
+        todoList.push(value);
+        localStorage.setItem(storageKey, JSON.stringify(todoList));
+        todoList = JSON.parse(localStorage.getItem(storageKey));
+        render(todoList)
+      }
+
+      /* funciton called */
+      loadData1();
+    </script>
+  </body>
+</html>

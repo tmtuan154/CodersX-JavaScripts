@@ -1,0 +1,46 @@
+Các hàm khi sử dụng mảng
+
+map() ánh xạ giá trị từ mảng ban đầu thành mảng với giá trị khác. Giá trị trả về là mảng
+
+filter() lọc những giá trị thỏa điều kiện. kết quả là mảng. Giá trị lọc là true/flase
+
+find() tìm giá trị trong mảng thỏa điều kiện. trả về 1 giá trị, sau khi tìm được điều kiện true
+
+reduce() (total, item) 
+(item1, item2) hàm tính giá trị xong gộp lại vào item1 kết quả chỉ là 2 số
+
+Array.isArray(item) kiểm tra item có phải là array không
+
+cú pháp if ba ngôi condition ? true : false
+
+
+Math Object
+Math.celi() làm tròn lên
+Math.floor() làm tròn xuống
+
+Bài 24: Math Object
+Hàm toFixed(number) trả về kiểu chuổi với number số sau dấu phẩy
+
+Bài 25: Từ khóa new
+Method changing vì return về nó (return this) nên gọi cùng lúc nhiều method
+Function như class có thể nhận vào tham số và new
+suTu.eat(c1).eat(c2) với hàm eat return this
+
+Bài 26: Protertype
+Có 2 cách tạo object
+1.	Tạo thủ công định nghĩa ra các thuộc tính
+2.	Dùng function với this.arrgument = tham số truyền vào, sử dụng với từ khóa new 
+Phân biệt hàm bình thường và hàm Object
+Hàm bình thường: viết theo kiểu lạc đà isPrime, khi sử dụng gọi isPrime() hoặc có tham số hoặc không. Tên hàm thường là động từ
+Hàm Object: được sử dụng với từ khóa new,  chữ đầu tiên viết hoa Student. Tên hàm thường là danh từ.
+Prototype của Object là {}. Trong prototype.contructor chính là Function được tạo
+Ý nghĩa của prototype là sử dụng được với những object có chưa từ khóa new
+Student.protetype.sleep = function(){
+	consolog(‘Zzz...’);
+}
+Những đối tượng student đều có thể sử dụng sleep.
+Vậy tại sao phải sử dụng protertype
+Tiết kiệm bộ nhớ, với cách khai báo riêng biệt this.sleep: funciton(){} thì mỗi object sẽ tạo ra một đối tượng sleep như vậy sẽ tốn bộ nhớ hơn và khi ta so sánh obj1.sleep === obj2.sleep thì kết quả ra false
+Trong khi đó khi ta sử dụng protertype thì ngược lại cả hai cùng trỏ vào sleep.
+Tại protertpype có thể sử dụng thuộc tính this.property của đối tượng để sử dụng
+
