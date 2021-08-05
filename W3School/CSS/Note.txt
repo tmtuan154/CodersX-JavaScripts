@@ -1,0 +1,93 @@
+CSS - W3S
+
+Note property when using to format style HTML
+{
+	text-align: 
+	color: (text-color)
+	
+}
+
+1. Syntax
+ - selector: h1, p, ...
+ - decleration: {property: value}
+ 
+2. Selector
+ - id selector: using by '#id'
+ - class selector: using by '.className'. Apply for all HTML elements with class is className
+ - element.class: using when you want to style with species element and class. Ex: p.center: in this example only <p> element with class = 'center'
+ - HTML can contain many class for element. <div class= 'a b'>...
+ - You can group selector by using h1, h2, p {property: value, ...}
+
+3. How to use
+ - Inline
+ - Internal
+ - External: <link rel="stylesheet" href="mystyle.css">
+ 
+4. Comment
+
+5. Colors
+ 5.1 Colors (can using name color)
+	- background-color: 
+	- color: using for text color
+	- border: 
+ 5.2 RGBA Value
+	- With a is anpha value: value form 0 to 1
+	- With 0: full transparent
+	- With 1 not transparent at all
+ 5.3 Hex color
+ 
+6. Backgrounds
+ 6.1 Backgrounds color
+ 6.2 background-image: using with url('')
+ 
+7. Borders
+ - boder-style: soild
+ - border-with: 5px (can specific size (px, pt, cm, em, etc)
+ - border-with: 5px 10px (5px top and bottom, 20px on the sides
+ - border-with: 20px 10px 4px 35px (25px top, 10px right, 4px bottom, 35px left)
+ - border-color: can set for four sides
+ - border side: border-top-style, border-bottom-style, ... with left and right
+ 7.1 Border Shorthand
+ - border: border-with boder-style (required border-color
+ - border-radius: 5px
+ 
+8. Margin
+ - Margin used to create space arounf elements, outside of any defined borders
+ - Margin also have margin-top -left -bottom - right
+ - Margin shorthand: margin: top right bottom left
+
+9. Pading
+ - Similar with margin: pading create space around an element's content, inside of any defined border
+
+10. Height, width
+ - Height, width don't contain border, pading and margin
+ 
+11. Box model
+ - Margin -> Border -> Pading -> Content
+ - ex: div {
+		  width: 320px;
+		  padding: 10px;
+		  border: 5px solid gray;
+		  margin: 0;
+		}
+ - total width is 350px
+ 
+12. Outline
+ - Outline is a line drawn outside element, outside border
+ - Similar with border have outline-style: soild, dottted, ...
+ 12.1 outline-with
+	- thin
+	- medium
+	- or ?px
+ 12.2 outline-color
+ 12.3 outline shorthand: similar with border
+
+13. Text
+ 13.1. Text color
+ 13.2. Text alignment
+	- text-align: 
+ 13.3 Text decoration
+	- underline, line-through
+ 13.4 Text tranformation
+	- uppercase, lower case, ...
+

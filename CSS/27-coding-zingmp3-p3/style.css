@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.album-overlay{
+    width: 128px;
+    height: 128px;
+    background-image: url('https://loremflickr.com/320/240');
+    background-size: cover;
+    background-position: center;
+    font-size: 60px;
+}
+
+.album-overlay .overlay{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.album-overlay:hover .overlay{
+    opacity: 1;
+}

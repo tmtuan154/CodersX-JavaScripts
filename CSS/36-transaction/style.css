@@ -1,0 +1,35 @@
+.container{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./1.jpg');
+    font-size: 60px;
+}
+
+.play-icon{
+    color: white;
+}
+
+.container .overlay{
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.container:hover .overlay{
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(110,105,209,0.35820819805194803) 0%, rgba(251,240,240,0.28) 100%);
+}
+
+.container .overlay .play-icon{
+    transform: scale(0.5);
+    transition: all 0.5s;
+}
+
+.container:hover .overlay .play-icon{
+    transform: scale(1);
+}

@@ -1,0 +1,18 @@
+.container{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+}
+
+.child1{
+    background-color: red;
+}
+
+.child2{
+    background-color: aqua;
+}
+
+.container-swap .child1{
+    order: 1;
+}

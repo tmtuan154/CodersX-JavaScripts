@@ -1,0 +1,3 @@
+Với mỗi li chèn thêm thẻ a vô, chỉnh màu vs text-decoration cho thẻ a
+
+Nhưng khi click vào nút thì muốn nhấn vào phần padding để đi luôn

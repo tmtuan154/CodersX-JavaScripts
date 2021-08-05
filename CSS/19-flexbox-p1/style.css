@@ -1,0 +1,21 @@
+.container{
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.div1{
+    background-color: blue;
+    flex-basis: 150px;
+}
+
+.div2{
+    background-color: brown;
+}
+
+.div3{
+    background-color: aqua;
+}

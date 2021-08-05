@@ -1,0 +1,36 @@
+.link1{
+    font-style: italic;
+}
+
+.link2{
+    font-style: normal;
+}
+
+.link3{
+    border: 2px solid greenyellow;
+    padding: 10px 20px;
+}
+
+.link4{
+    background-color: red;
+    border-style: none;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+a:vistied{
+    color: red;
+}
+
+a:hover{
+    background-color: aquamarine;
+}
+
+.the{
+    margin-top: 20px;
+}

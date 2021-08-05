@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+    position: relative;
+}
+
+.green{
+    background-color: green;
+}
+
+.fixed{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}

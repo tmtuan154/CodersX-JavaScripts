@@ -1,0 +1,32 @@
+/* table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+
+/* th, td{
+    border-bottom: 1px solid lightgray;
+} */
+
+table{
+    width: 100%;
+}
+
+th{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: greenyellow;
+}
+
+
+td{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: lightgray;
+}
+
+div1{
+    overflow-x: auto;
+}
