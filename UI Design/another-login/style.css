@@ -1,0 +1,56 @@
+.image{
+    width: 60px;
+    height: 60px;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./paris.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    background-color: rgba(109, 95, 95, 0.336);
+    position: relative;
+    border-radius: 1rem;
+}
+
+form h2{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+form img{
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, 0);
+    padding: 7px;
+    background-color: white;
+    border-radius: 2rem;
+    max-width: 100%;
+    height: auto;
+}
+
+form input{
+    display: block;
+    margin: 20px 10px;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+}
+
+form button{
+    width: 100%;
+    border-radius: 2rem;
+    margin: 20px 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+}

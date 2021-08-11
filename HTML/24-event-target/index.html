@@ -27,17 +27,17 @@
       var todoListTag = document.getElementById("todo-list");
 
       /* Add event listener */
-      addTodoBtn.addEventListener("click", addNewTodo1);
+      addTodoBtn.addEventListener("click", addNewTodo);
       todoListTag.addEventListener("click", onListClicked);
 
       /* Function definitiom */
       function onListClicked(event) {
         var button = event.target;
         var id = button.dataset.id;
+        console.log(id);
         todoList.splice(id, 1);
         localStorage.setItem(storageKey, JSON.stringify(todoList));
         render(todoList);
-
       }
 
       function render(todoList) {
@@ -55,21 +55,15 @@
         todoListTag.innerHTML = content.join("");
       }
 
-      function loadData1() {
+      function loadData() {
         var todoListStorage = JSON.parse(localStorage.getItem(storageKey));
         var todoRender = [];
-        // if (todoListStorage !== null) {
-        //   todoRender = todoListStorage;
-        // }
-        // else{
-        //     todoRender = todoListInit;
-        // }
-        todoRender = todoListStorage.length !== 0 ? todoListStorage : todoListInit;
+        todoRender = todoListStorage === null ? todoListInit  : todoListStorage;
         todoList = todoRender;
         render(todoRender);
       }
 
-      function addNewTodo1() {
+      function addNewTodo() {
         const todoInputTag = document.getElementById("txtTodo");
         const value = todoInputTag.value;
 
@@ -83,7 +77,7 @@
       }
 
       /* funciton called */
-      loadData1();
+      loadData();
     </script>
   </body>
 </html>
