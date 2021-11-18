@@ -1,0 +1,23 @@
+.box{
+    margin: 1rem 0 0 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all .5s linear;
+    width: 20rem;
+    height: 20rem;
+    opacity: 1;
+    position: relative;
+}
+
+.box:hover{
+    background-color: #ddd;
+    color: #fff;
+    opacity: 1;
+}
+
+.box p{
+    color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

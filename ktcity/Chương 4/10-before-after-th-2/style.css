@@ -1,0 +1,93 @@
+.title{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin: 5px auto;
+    text-align: center;
+}
+
+body{
+    font-size: 62.5%;
+    
+}
+
+.title:before{
+    content: '';
+    width: 100%;
+    height: 0.1rem;
+    background-color: red;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+.title-text{
+    background-color: white;
+    padding: 0 5px;
+    position: relative;
+    font-weight: bold;
+}
+
+.user{
+    width: 5rem;
+    height: 5rem;
+    color: green;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 4px;
+}
+
+.user-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user:after{
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    background-color: currentColor;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+}
+
+.effect{
+    text-decoration: none;
+    padding: 1rem;
+    margin: 2rem;
+    border: 1px solid orange;
+    border-radius: 1rem;
+    position: relative;
+    transition: all .25s linear;
+    z-index: 1;
+}
+
+.effect:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: orange;
+    border-radius: inherit;
+    transition: all .25s linear;
+    z-index: -1;
+}
+
+.effect:hover:before{
+    width: 100%;
+}
+
+.effect:hover{
+    color: white;
+}
+

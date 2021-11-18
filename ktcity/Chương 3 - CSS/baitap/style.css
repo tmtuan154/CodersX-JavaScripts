@@ -1,0 +1,86 @@
+.button-group{
+    margin: 1rem auto;
+}
+
+.button{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 0;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    margin-left: 1rem;
+    box-shadow: 0 0 10px 0.5 rgb(114, 228, 142);
+}
+
+.button-success{
+    background-image: linear-gradient(to left, rgb(114, 228, 142), rgb(28, 230, 21));
+   
+}
+
+.button-info{
+    background-image: linear-gradient(to left, rgb(137, 195, 235), rgb(34, 180, 238));
+}
+.button-warning{
+    background-image: linear-gradient(to left, rgb(224, 231, 119), rgb(217, 231, 22));
+}
+.button-contact{
+    background-image: linear-gradient(to left, rgb(230, 152, 100), rgb(233, 112, 14));
+}
+.button-delete{
+    background-image: linear-gradient(to left, rgb(224, 104, 104), rgb(235, 104, 44));
+}
+.button-buy{
+    background-image: linear-gradient(to left, rgb(152, 90, 233), rgb(188, 21, 230));
+}
+
+.text{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, rgb(226, 199, 44), rgb(214, 50, 214));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.color-item{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 1rem;
+    transition: all .05s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.color-item:first-child{
+    background-color: rgb(49, 49, 187);
+}
+
+.color-item:nth-child(odd):hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.color-item:nth-child(even):hover{
+    background-color: springgreen;
+    cursor: pointer;
+}
+
+.color-item:nth-child(2){
+    background-color: blueviolet;
+}
+
+.color-item:nth-child(3){
+    background-color: orange;
+}
+
+.color-item:nth-child(4){
+    background-color: chocolate;
+}

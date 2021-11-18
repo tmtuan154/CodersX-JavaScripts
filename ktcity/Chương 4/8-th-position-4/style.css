@@ -1,0 +1,34 @@
+body{
+    font: 62.5%;
+}
+
+.bar{
+    width: 30rem;
+    background-color: #ddd;
+    height: 1rem;
+    border-radius: 1rem;
+    margin: 1rem auto 0;
+    position: relative;
+}
+
+.bar-progress{
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgb(29, 221, 205);
+    position: absolute;
+    z-index: 1;
+}
+
+.bar-circle{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(29, 221, 205);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+}
+
+Done!!!

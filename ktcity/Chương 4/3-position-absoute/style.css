@@ -1,0 +1,67 @@
+.box{
+    width: 100%;
+    height: 30rem;
+    background-color: #777;
+    position: relative;
+}
+
+.box1{
+    width: 10rem;
+    height: 5rem;
+    background-color: #ddd;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    /* Theo chiều ngang */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    
+
+    /* Theo chiều dọc */
+    /* top: 50%;
+    transform: translateY(-50%); */
+
+    /* Box 1 phủ hết tất cả */
+    /* Cách 1 */
+    /* top: 0;;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+
+    /* Cách 2 */
+    /* Do width và heigh set cố đinh nên bổ sung
+        thuộc tính auto */
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto; */
+
+    /* 
+        Overlay theo chiều dọc
+    */
+    /* Cách 1 */
+    /* top: 0;
+    left: 0;
+    height: 100%; */
+
+
+    /* Cách 2 */
+    /* left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto; */
+
+
+    /* 
+        Overlay theo chiều ngang
+    */
+    /* Cách 1 */
+
+
+    /* Cách 2 */
+
+}

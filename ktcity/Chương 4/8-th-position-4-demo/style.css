@@ -1,0 +1,29 @@
+body{
+    font-size: 62.5%;
+}
+
+.bar{
+    position: relative;
+    background-color: #ddd;
+    width: 30rem;
+    height: 1rem;
+    margin: 5px auto 0;
+    border-radius: 1rem;
+}
+
+.bar-progress{
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: green;
+}
+
+.bar-cricle{
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
